@@ -1,0 +1,49 @@
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[user]
+	name = Hank Fanchiu
+	email = email@email.com
+[alias]
+	aa = add --all
+	a = add
+	b = branch
+	bd = branch -D
+	c = commit
+	cm = commit -m
+	co = checkout
+	cob = checkout -b
+	d = diff
+	last = log -1 HEAD
+	l = log
+	pl = pull
+	ps = push
+	psf = push -f
+	psu = push -u
+	ready = rebase -i @{u}
+	s = status
+[push]
+	default = simple
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	interactive = auto
+	showbranch = auto
+	ui = true
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = magenta
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = green
+	changed = red
+	untracked = blue
+[core]
+	excludesfile = ~/.gitignore_global
